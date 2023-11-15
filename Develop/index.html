@@ -38,6 +38,7 @@
 
     const allcharacterpass = uppercase + lowercase + number + symbol;
     function generatepass() {
+
       let PasswordGenerate = "";
       PasswordGenerate += uppercase[Math.floor(Math.random() * uppercase.length)];
       PasswordGenerate += lowercase[Math.floor(Math.random() * lowercase.length)];
@@ -47,12 +48,15 @@
       while (passwordlenght > PasswordGenerate.length) {
         PasswordGenerate += allcharacterpass[Math.floor(Math.random() * PasswordGenerate.length)];
       }
+      const userInput = prompt(PasswordGenerate);
+
+      if (userInput === PasswordGenerate) {
+        alert('password correct');
+      } else {
+        alert('password incorrect');
+      }
       password.value = PasswordGenerate;
     }
-
-
-
-
 
 
   </script>
