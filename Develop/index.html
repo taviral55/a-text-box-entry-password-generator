@@ -49,14 +49,14 @@
       while (passwordlenght > PasswordGenerate.length) {
         PasswordGenerate += allcharacterpass[Math.floor(Math.random() * PasswordGenerate.length)];
       }
-      const userInput = prompt(PasswordGenerate);
+      const userInput = prompt('Copy PAssword And past Inside the input field!' + " " + PasswordGenerate);
 
       if (userInput === PasswordGenerate) {
-        alert('password correct');
+        password.value = PasswordGenerate;
       } else {
-        alert('password incorrect');
+        alert('password confirm the password');
       }
-      password.value = PasswordGenerate;
+
     }
 
 
