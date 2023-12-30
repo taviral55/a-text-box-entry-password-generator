@@ -19,49 +19,14 @@
         <h2>Generate a Password</h2>
       </div>
       <div class="card-body">
-        <textarea readonly id="password" value="" placeholder="Your Secure Password"
-          aria-label="Generated Password"></textarea>
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
       </div>
       <div class="card-footer">
-        <button onclick="generatepass()" id="generate" class="btn">Generate Password</button>
+        <button id="generate" class="btn">Generate Password</button>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    const password = document.getElementById("password");
-    const passwordlenght = 8;
-
-    const symbol = "!@#$%^&*()";
-    const lowercase = "abcdefghijklmnopqrstuvwxyz";
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const number = "0123456789";
-
-
-    const allcharacterpass = uppercase + lowercase + number + symbol;
-    function generatepass() {
-
-      let PasswordGenerate = "";
-      PasswordGenerate += uppercase[Math.floor(Math.random() * uppercase.length)];
-      PasswordGenerate += lowercase[Math.floor(Math.random() * lowercase.length)];
-      PasswordGenerate += number[Math.floor(Math.random() * number.length)];
-      PasswordGenerate += symbol[Math.floor(Math.random() * symbol.length)];
-
-      while (passwordlenght > PasswordGenerate.length) {
-        PasswordGenerate += allcharacterpass[Math.floor(Math.random() * PasswordGenerate.length)];
-      }
-      const userInput = prompt('Copy PAssword And past Inside the input field!' + " " + PasswordGenerate);
-
-      if (userInput === PasswordGenerate) {
-        password.value = PasswordGenerate;
-      } else {
-        alert('password confirm the password');
-      }
-
-    }
-
-
-  </script>
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 
 </html>
